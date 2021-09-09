@@ -13,9 +13,10 @@ class Stack:
         self.elem.insert(0, e)
 
     def pop(self):
-        val = self.elem[0]
-        self.elem = self.elem[1:]
-        return val
+        try:
+            return self.elem.pop(0)
+        except IndexError:
+            print("List already empty")
 
     def getList(self):
         return self.elem
