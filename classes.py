@@ -17,6 +17,8 @@ class Club:
     def __getitem__(self, i):
         return self.players[i]
 
+    # Note: len and getitem function make class object iterable using for loop
+
     # define a method that returns a string representation of this object,
     # which can be used to recreate this object.
     # The return value should be in such format (beware of the spacing):
@@ -37,7 +39,8 @@ class Club:
 
 cl = Club("aa")
 cl.players.append("ZZ")
-print(cl.__repr__())
-
+cl.players.append("P2")
+for i in cl:
+    print(i)
 
 print(__name__)
