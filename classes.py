@@ -1,4 +1,4 @@
-import temp.test
+#import temp.test
 
 
 class Club:
@@ -43,4 +43,30 @@ cl.players.append("P2")
 for i in cl:
     print(i)
 
-print(__name__)
+# print(__name__)
+
+
+# Multiple inheritance
+class Salary:
+    def calculate(self, hours: float) -> float:
+        return self.rate * hours
+
+
+class Promotable:
+    # _raise so it doesn't clash with Python's raise keyword!
+    def promote(self, _raise: float) -> None:
+        self.rate += _raise
+
+
+class Employee(Salary, Promotable):
+    def __init__(self, rate: float):
+        self.rate = rate
+
+    def weekly_salary(self) -> float:
+        return self.calculate(40)
+
+
+e = Employee(10)
+print(e.weekly_salary())
+e.promote(22)
+print(e.weekly_salary())
