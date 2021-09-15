@@ -21,6 +21,5 @@ def test():
     for i in g:
         print(i)
 
-test()
 
 #print(__name__)
