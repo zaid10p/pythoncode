@@ -2,6 +2,8 @@
 
 
 class Club:
+    T = ("one", "two")
+
     def __init__(self, name, players=[]):
         self.name = name
         self.players = players
@@ -22,22 +24,27 @@ class Club:
     # define a method that returns a string representation of this object,
     # which can be used to recreate this object.
     # The return value should be in such format (beware of the spacing):
-    # Club {club_name}: {list_of_players}
-    # the club_name and list_of_players should be replaced by the according value of current object
     def __repr__(self):
         return f"Club {self.name}: {self.players}"
 
     # define a method that returns a readable string representation of this object for the user.
     # The return value should be in such format (beware of the spacing):
-    # Club {club_name} with {count_of_players} players
-    # the club_name and count_of_players should be replaced by the according value of current object
     def __str__(self):
         return f"Club {self.name} with {len(self)} players"
 
     # @property for using function as property
 
+    @classmethod
+    def clsFunc(cls):
+        print('clas method', cls, cls.T)
+
+    @staticmethod
+    def static():
+        print("Static func")
+
 
 cl = Club("aa")
+Club.clsFunc()
 cl.players.append("ZZ")
 cl.players.append("P2")
 for i in cl:

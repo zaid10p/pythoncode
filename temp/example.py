@@ -13,7 +13,8 @@ def is_filename_safe(filename):
 
 print(is_filename_safe('as2.jpg'))
 
-def test():
+def test(*y):
+    print(y)
     slist = ["tt", "Sdsfd", "AA", "xx", "SZ"]
     g = filter(lambda x: x.startswith("S"), slist)
     alt = [s for s in slist if s.startswith("S")]
@@ -21,5 +22,6 @@ def test():
     for i in g:
         print(i)
 
+test('')
 
 #print(__name__)
