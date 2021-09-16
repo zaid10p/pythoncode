@@ -5,7 +5,7 @@ from functools import wraps
 
 b = BinaryTree(Node(6))
 
-for v in [5,3,9,7,8,7.5,12,11]:
+for v in [5, 3, 9, 7, 8, 7.5, 12, 11]:
     b.add(Node(v))
 
 b.inorder()
@@ -14,13 +14,13 @@ print(" ------")
 b.inorder()
 
 
-
 st = Stack([2, 3])
 st.pop()
 st.push(5)
 # print(st.getList())
 
 # Decorators example :
+
 
 def get_user_role() -> int:
     return 1
