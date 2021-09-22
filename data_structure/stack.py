@@ -1,7 +1,7 @@
 
 class Stack:
-    def __init__(self, initVal=[]) -> None:
-        self.elem = initVal
+    def __init__(self, *initVal) -> None:
+        self.elem = list(initVal)
 
     def __len__(self):
         return len(self.elem)
